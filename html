@@ -1,0 +1,41 @@
+<canvas> id="canvas" height="20" width="20" style="border: 1px solid #CCC;
+      height: 500px; width: 500px; image-rendering: pixelated;"></canvas>
+      <script>
+        var canvas = document.getElementById('canvas')
+        var context = canvas.getContext('2d');
+
+        var jogador1 = {
+            x: 12,
+            y: 15
+        }
+        function desenharjogador() {
+            context.fillRect(jogador1.x, jogador1.y, 1, 1);
+        }
+        function linparTela() {
+            context.clearRect(0,0,20,20);
+        }
+        function desenharjogo(){
+            linparTela();
+            desenharjogador();
+        }
+
+ document.addEventListener('keydowm', movePlayer);
+
+        function movePlayer(event){
+            if (event.key == 'ArrowUp' ){
+            jogardor1.y = jogador1.y - 1;
+            }
+        desenharjogo();
+    }
+            function movePlayer(event){
+                if (event.key == 'ArrowDown' ){
+                jogardor1.y = jogador1.y + 1;
+            }
+            function movePlayer(event){
+                if (event.key == 'ArrowRight' ){
+                jogardor1.x = jogador1.x * 1;
+            }
+    
+            function movePlayer(event){
+                if (event.key == 'ArrowLeft' ){
+                jogardor1.x = jogador1.x / 1;
